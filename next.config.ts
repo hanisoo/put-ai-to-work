@@ -13,10 +13,9 @@ const nextConfig: NextConfig = {
       },
     },
   },
-  experimental: {
-    // __dirname 대신 path.resolve('.')를 사용해 현재 폴더 기준 상위 디렉토리를 지정합니다.
-    outputFileTracingRoot: path.resolve(".", "../"),
-  },
+
+  // 1. experimental 내부에서 빼서 최상단(루트)에 바로 선언합니다.
+  outputFileTracingRoot: path.resolve(".", "../"),
 };
 
 export default nextConfig;
